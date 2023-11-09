@@ -5,7 +5,7 @@
     height: 600px;
     width: 75%;
     margin-bottom: 25px;
-    background-image: url('images/standby.jpeg');
+    background-image: url('/assets/images/standby.jpeg');
     background-size: cover;
     background-position: 50% 25%;
 }
