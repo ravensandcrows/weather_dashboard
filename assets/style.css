@@ -1,0 +1,18 @@
+/*background image + bounds set*/
+#hero{
+    display: flex;
+    flex-wrap:wrap;
+    height: 600px;
+    width: 75%;
+    margin-bottom: 25px;
+    background-image: url('images/standby.jpeg');
+    background-size: cover;
+    background-position: 50% 25%;
+}
+
+/* heat, standby 50% 25% */
+/* rainy, windy, blizzard, cloudy, tornado, ice 50% 75%*/
+/* cloudy, sunny, hurricane, cold advi 75% 50% */
+/* thunder 50% 65% */
+
+
