@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sidebar layout</title>
+  <meta charset="UTF-8" />
     <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Tempest Weather Forecast</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <header>
+    <header class="overlay">
         <h1>Tempest Weather Forecast</h1>
         <nav>
             <ul>
@@ -16,36 +15,220 @@
                     <a href="#forecast">Forecast</a>
                 </li>
                 <li>
-                    <a href="#advisories">Advisories</a>
+                    <a href="#advisories" class="advise">Advisories</a>
                 </li>
                 <li>
-                    <a href="#saved_cities"></a>Saved Cities</a>
+                    <a href="#saved_cities">Saved Cities</a>
                 </li>
             </ul>
         </nav>
     </header>
-    <hero id="hero"></hero>
-    <main>
-        <aside class="search">
-            <h2>Search</h2>
-            <!-- SEARCH BAR HERE -->
-            <!-- RECENT SEARCHES HERE -->
-            <button>Save</button>
+
+    <!-- sets the outline for the page -->
+    <div class="outline">
+        <!-- ASIDE search bar/recent searches/save -->
+        <aside class="aside">
+            <div id="start" class="text-block">
+                <h2>Search</h2>
+                <!-- SEARCH BAR HERE  -->
+                <div class="center">
+                    <button id="btn">&#x2764; Save</button>
+                </div>
+            </div>
+            <div>
+                <!-- RECENT SEARCHES HERE  -->
+                <h2 id="recent-h2">Recent Searches</h2>
+                <ul>
+                    <li class="recent-search">CITY NAME</li>
+                    <li class="recent-search">CITY NAME</li>
+                    <li class="recent-search">CITY NAME</li>
+                    <li class="recent-search">CITY NAME</li>
+                    <li class="recent-search">CITY NAME</li>
+                </ul>
+            </div>
         </aside>
-        <section id="forecast">
-            <!-- SEARCHED CITIES FORECAST -->
-            <!-- FIVE DAY FORECAST -->
-        </section>
-        <section id="advisories">
-            <!-- WEATHER WARNINGS HERE -->
-        </section>
-        <section id="saved_cities">
-            <!-- LOCAL STORAGE HERE -->
-        </section>
-    </main>
+
+        <main class="content">
+            <!-- HERO -->
+            <section class="content-block hero">
+                <!-- SEARCHED CITY'S FORECAST -->
+                <hero id="hero">
+                    <div class="city-card">
+                        <div class="banner banner-margin">
+                            <h2 class="space">City</h2>
+                            <h4 class="space">DATE</h4>
+                            <ul class="banner-margin">
+                                <li class="space"> Weather</li>
+                                <li class="space">Temperature<li>
+                                <li class="space">Humidity</li>
+                                <li class="space">Wind</li>
+                            </ul>
+                        </div>
+                    </div>
+                </hero>
+            </section>
+            <!-- FORECAST -->
+            <section class="content-block" id="forecast">
+                <!-- FIVE DAY FORECAST -->
+                <div class="five-day">
+                    <div class="day-1">
+                        <h3 id="day-1">Day 1</h3>
+                        <h4>DATE</h4>
+                        <h5>CITY</h5>
+                        <img src="./assets/images/icons/cloudy.png" alt="weather icon" id="icon-day-1">
+                        <ul class="box-list">
+                            <li>
+                                <h2>Weather:</h2>
+                                <p>Cloudy</p>
+                            </li>
+                            <li>
+                                <h2>Temperature:</h2>
+                                <p>60 F</p>
+                            </li>
+                            <li>
+                                <h2>Humidity:</h2>
+                                <p>40%</p>
+                            </li>
+                            <li>
+                                <h2>Wind Speed:</h2>
+                                <p>3mph</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="day-2">
+                        <h3 id="day-2">Day 2</h3>
+                        <h4>DATE</h4>
+                        <h5>CITY</h5>
+                        <img src="./assets/images/icons/Sunny.svg.png" alt="weather icon" id="icon-day-2">
+                        <ul class="box-list">
+                            <li>
+                                <h2>Weather:</h2>
+                                <p>Cloudy</p>
+                            </li>
+                            <li>
+                                <h2>Temperature:</h2>
+                                <p>60 F</p>
+                            </li>
+                            <li>
+                                <h2>Humidity:</h2>
+                                <p>40%</p>
+                            </li>
+                            <li>
+                                <h2>Wind Speed:</h2>
+                                <p>3mph</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="day-3">
+                        <h3 id="day-3">Day 3</h3>
+                        <h4>DATE</h4>
+                        <h5>CITY</h5>
+                        <img src="./assets/images/icons/windy.png" alt="weather icon" id="icon-day-3">
+                        <ul class="box-list">
+                            <li>
+                                <h2>Weather:</h2>
+                                <p>Cloudy</p>
+                            </li>
+                            <li>
+                                <h2>Temperature:</h2>
+                                <p>60 F</p>
+                            </li>
+                            <li>
+                                <h2>Humidity:</h2>
+                                <p>40%</p>
+                            </li>
+                            <li>
+                                <h2>Wind Speed:</h2>
+                                <p>3mph</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="day-4">
+                        <h3 id="day-4">Day 4</h3>
+                        <h4>DATE</h4>
+                        <h5>CITY</h5>
+                        <img src="./assets/images/icons/rainy.png" alt="weather icon" id="icon-day-4">
+                        <ul class="box-list">
+                            <li>
+                                <h2>Weather:</h2>
+                                <p>Cloudy</p>
+                            </li>
+                            <li>
+                                <h2>Temperature:</h2>
+                                <p>60 F</p>
+                            </li>
+                            <li>
+                                <h2>Humidity:</h2>
+                                <p>40%</p>
+                            </li>
+                            <li>
+                                <h2>Wind Speed:</h2>
+                                <p>3mph</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="day-5">
+                        <h3 id="day-5">Day 5</h3>
+                        <h4>DATE</h4>
+                        <h5>CITY</h5>
+                        <img src="./assets/images/icons/snowy.png" alt="weather icon" id="icon-day-5">
+                        <ul class="box-list">
+                            <li>
+                                <h2>Weather:</h2>
+                                <p>Cloudy</p>
+                            </li>
+                            <li>
+                                <h2>Temperature:</h2>
+                                <p>60 F</p>
+                            </li>
+                            <li>
+                                <h2>Humidity:</h2>
+                                <p>40%</p>
+                            </li>
+                            <li>
+                                <h2>Wind Speed:</h2>
+                                <p>3mph</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!-- ADVISORIES HIDE THIS LATER -->
+            <section class="content-block" id="advisories">
+                <h3 class="no-alert">No Alert at this time</h3>
+                <img src="./assets/images/standby.jpg" alt="weather icon" id="warning">
+                <!-- WEATHER WARNINGS HERE -->
+                <div class="card">
+                    <p>REPORT HERE REPORT HERE REPORT HERE REPORT HERE</p>
+                </div>
+            </section>
+            <!-- SAVED CITIES -->
+            <section class="content-block" id="saved_cities">
+                <h3 class="favorite">Your Favorite Cities</h3>
+                <ul class="loved-cities">
+                    <li>
+                        <button id="city-1">City 1</button>
+                    </li>
+                    <li>
+                        <button id="city-2">City 2</button>
+                    </li>
+                    <li>
+                        <button id="city-3">City 3</button>
+                    </li>
+                    <li>
+                        <button id="city-4">City 4</button>
+                    </li>
+                    <li>
+                        <button id="city-5">City 5</button>
+                    </li>
+                </ul>
+                <!-- LOCAL STORAGE HERE -->
+            </section>
+        </main>
+    </div>
     <footer>
         <h3>Authentic Reports Made Simple</h3>
     </footer>
-    <!-- https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key} -->
+
 </body>
 </html>

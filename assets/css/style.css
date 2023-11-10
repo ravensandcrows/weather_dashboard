@@ -1,12 +1,140 @@
+*{
+    box-sizing: border-box;
+}
+
+#advise{
+    padding: 60px;
+    background-image: url(/assets/images/icons/alert.png);
+    background-size:cover;
+    background-position: 50% 70%;
+    width: 20%;
+    height: 20%;
+    color: cadetblue;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+/* HEADER / NAV */
+a{
+    color:whitesmoke;
+    text-decoration: none;
+}
+
+/*Sets basis for headers colors*/
+header{
+    display: flex;
+    flex-wrap: wrap;
+    color: whitesmoke;
+    background-image: linear-gradient(0deg, black, rgba(0, 0, 0, 0.35)), url(/assets/images/header.jpeg);
+    background-size: cover;
+    padding: 3%;
+    position: relative;
+}
+
+/*Font info set*/
+h1 {
+    display: inline-block;
+    text-align: left;
+    font-family:cursive;
+    font-size: 300%;
+    margin-left: 1%;
+}
+
+/*nav location set*/
+header nav{
+    margin-left: auto;
+    margin-top: auto;
+}
+
+/*text styling*/
+header nav ul{
+    list-style-type: none;
+    font-family: monospace;
+    font-size: 250%; 
+}
+
+/*display set*/
+header nav ul li {
+    display:inline-block;
+}
+
+/*colors*/
+nav a {
+    color: whitesmoke;
+}
+
+/* BODY STARTS HERE */
+/* sets the body outline */
+.outline {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+}
+
+/* ASIDE INFO */
+/* sets the base setting for the aside */
+.aside {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 416px;
+    background-color: #3f4d6d;
+    color: whitesmoke;
+    border-style: solid;
+    border-width: 10px;
+    border-color: #1F2022;
+    padding: 40px 30px;
+}
+
+.text-block{
+    background-color: white;
+    color: black;
+    padding: 10px;
+    margin-bottom: 100%;
+}
+
+.recent-search{
+    background-color: whitesmoke;
+    color: #1F2022;
+    border: black;
+    border-style: solid;
+    border-width: 5px;
+    padding: 25px 50px;
+    margin-top: 5%;
+    text-align: center;
+}
+
+#recent-h2{
+    text-align: center;
+    text-decoration: underline;
+    font-size: 150%;
+}
+
+#btn{
+    margin-top: 5%;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #1F2022;
+    background-color: #a8b5d7;
+    padding: 5px 80px;
+    text-align: center;
+}
+
+.center{
+    text-align: center;
+}
+
+/* HERO */
 /*background image + bounds set*/
 #hero{
     display: flex;
     flex-wrap:wrap;
+    float: right;
     height: 600px;
-    width: 75%;
+    width: 100%;
     margin-bottom: 25px;
-    background-image: url('/assets/images/standby.jpeg');
-    background-size: cover;
+    background-image: url('/assets/images/standby.jpg');
+    background-size:cover;
     background-position: 50% 25%;
 }
 
@@ -15,4 +143,223 @@
 /* cloudy, sunny, hurricane, cold advi 75% 50% */
 /* thunder 50% 65% */
 
+/* aligns city info with photo */
+.city-card{
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
 
+/*sets up the internal textboxes + fonts*/
+.banner{
+    background-color: #1F2022;
+    opacity: 80%;
+    position:absolute;
+    color:whitesmoke;
+    padding:25px;
+    bottom: 0%;
+    right: 0%;
+    background-size: cover;
+}
+
+.banner-margin{
+    display: flex;
+    justify-content: center;
+}
+
+/* puts some space between all the words */
+.space{
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+/* FORECAST */
+#forecast{
+    width: 100%;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#forecast h4{
+    margin-bottom: 5px;
+}
+
+.five-day{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+}
+
+h3{
+    margin-top: 25px;
+    margin-bottom: 10px;
+    text-decoration: underline;
+    font-family: monospace;
+    font-size: 150%;
+}
+
+.day-1{
+    margin-left: 225px;
+    margin-right: 25px;
+    background-color: lightblue;
+    padding: 0px 40px 20px 40px;
+}
+.day-2{
+    margin-right: 25px;
+    background-color: lightblue;
+    padding: 0px 40px 20px 40px;
+}
+.day-3{
+    margin-right: 25px;
+    background-color: lightblue;
+    padding: 0px 40px 20px 40px;
+}
+.day-4{
+    margin-right: 25px;
+    background-color: lightblue;
+    padding: 0px 40px 20px 40px;
+}
+.day-5{
+    background-color: lightblue;
+    padding: 0px 40px 20px 40px;
+    /* margin-right: 20px; */
+}
+
+#icon-day-1{
+    max-height: 250px;
+    max-height: 250px;
+}
+#icon-day-2{
+    max-height: 250px;
+    max-height: 250px;
+}
+#icon-day-3{
+    max-height: 250px;
+    max-height: 250px;
+}
+#icon-day-4{
+    max-height: 250px;
+    max-height: 250px;
+}
+#icon-day-5{
+    max-height: 250px;
+    max-height: 250px;
+}
+
+.box-list li {
+  flex-basis: 50%;
+  box-sizing: border-box;
+  padding: 10px 0px 90px 5px;
+  text-align: left;
+  align-content: top;
+  font-size: 20px;
+  background-color: aliceblue;
+  margin-top: 15px;
+}
+.box-list li p{
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+}
+
+#warning{
+    height: 600px;
+    width: 100%;
+    /* margin-bottom: 25px; */
+    background-size:cover;
+}
+
+.card{
+    padding: 180px;
+    text-align: center;
+    border: #1F2022;
+    border-width: 5px;
+    border-style: solid;
+    font-size: 40px;
+}
+.warning{
+    margin-left: 115px;
+    font-size: 100px;
+    text-align: center;
+    background-color: red;
+    padding: 25px 180px 25px 180px;
+}
+
+.no-alert{
+    margin-left: 115px;
+    font-size: 100px;
+    text-align: center;
+    background-color:#1F2022;
+    color: whitesmoke;
+    padding: 25px 180px 25px 180px;
+}
+
+.loved-cities{
+    display: flex;
+    justify-content: center;
+}
+
+#city-1{
+    margin-left: 225px;
+    margin-right: 25px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    background-color: lightblue;
+    padding: 40px 80px 40px 80px;
+}
+#city-2{
+    margin-right: 25px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    background-color: lightblue;
+    padding: 40px 80px 40px 80px;
+}
+#city-3{
+    margin-right: 25px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    background-color: lightblue;
+    padding: 40px 80px 40px 80px;
+}
+#city-4{
+    margin-right: 25px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    background-color: lightblue;
+    padding: 40px 80px 40px 80px;
+}
+#city-5{
+    margin-right: 25px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    background-color: lightblue;
+    padding: 40px 80px 40px 80px;
+}
+
+.favorite{
+    background-color: #1F2022;
+    color: whitesmoke;
+    text-align: center;
+    padding: 25px;
+    font-size: 40px;
+}
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    background-image: linear-gradient(0deg, black, rgba(0, 0, 0, 0.35)), url(/assets/images/header.jpeg);
+    background-size: cover;
+    color: whitesmoke;
+    font-style: monospace;
+    font-size: 150%;
+    justify-content: center;
+    padding: 20px;
+}
