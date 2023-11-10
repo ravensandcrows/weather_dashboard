@@ -14,7 +14,15 @@ THEN I am again presented with current and future conditions for that city
 
 ## references
 css:
+    background position
     https://developer.mozilla.org/en-US/docs/Web/CSS/background-position
+
+    linear gradient
+    https://www.youtube.com/watch?v=jAXF7oS0RB4
+
+    side bar:
+    https://www.youtube.com/watch?v=Fx_NpAPM-iU
+    https://akashhamirwasia.com/blog/how-to-and-not-to-build-sidebar-layouts/#-approach-3-the-sticky-flex-way
 
 photos:
     Windy: https://pxhere.com/en/photo/63946
@@ -30,3 +38,11 @@ photos:
     Cold Warning:https://commons.wikimedia.org/wiki/File:Frost_on_Window.jpg
     Black Ice:https://www.pexels.com/photo/scenic-view-of-the-forest-during-winter-735787/
     Standby: https://www.washingtonpost.com/weather/2019/11/17/snow-fall-color-comparing-beauty-all-four-seasons-tidal-basin-photos/
+    Header: https://pxhere.com/en/photo/1011859#google_vignette
+
+Icons:
+    Cloudy: https://commons.wikimedia.org/wiki/File:Antu_weather-clouds.svg#/media/File:Antu_weather-clouds.svg
+    Sunny: https://commons.wikimedia.org/wiki/File:Weather_icon_-_sunny.svg#/media/File:Weather_icon_-_sunny.svg
+    Windy: https://commons.wikimedia.org/wiki/File:Weather_icon_-_windy.svg
+    Rainy: https://commons.wikimedia.org/wiki/File:Weather_icon_-_showers.svg#/media/File:Weather_icon_-_showers.svg
+    Snowy: https://commons.wikimedia.org/wiki/File:Weather_icon_-_snowy.svg
