@@ -13,6 +13,11 @@ THEN I am again presented with current and future conditions for that city
 
 
 ## references
+html:
+    search bar:
+    https://www.w3schools.com/howto/howto_css_searchbar.asp
+    favicon
+    https://www.w3schools.com/html/html_favicon.asp
 css:
     background position
     https://developer.mozilla.org/en-US/docs/Web/CSS/background-position
@@ -23,6 +28,9 @@ css:
     side bar:
     https://www.youtube.com/watch?v=Fx_NpAPM-iU
     https://akashhamirwasia.com/blog/how-to-and-not-to-build-sidebar-layouts/#-approach-3-the-sticky-flex-way
+
+    search bar:
+    https://www.giraffeacademy.com/web-development/css/styling-search-bar/
 
 photos:
     Windy: https://pxhere.com/en/photo/63946
