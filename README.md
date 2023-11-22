@@ -32,6 +32,9 @@ css:
     search bar:
     https://www.giraffeacademy.com/web-development/css/styling-search-bar/
 
+js:
+    https://javascript.info/async-await#:~:text=The%20word%20“async”%20before%20a,1%20%3B%20%7D%20f%20(%20)%20.
+
 photos:
     Windy: https://pxhere.com/en/photo/63946
     Rainy: https://www.flickr.com/photos/laffy4k/155406169
