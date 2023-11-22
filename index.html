@@ -53,7 +53,7 @@
                 <div class="city-card">
                     <div class="banner banner-margin">
                         <h2 class="space city_name">City</h2>
-                        <h4 class="space">DATE</h4>
+                        <h4 class="space" id="today"></h4>
                         <ul class="banner-margin">
                             <li class="space"> Weather</li>
                             <li class="space">Temperature<li>
@@ -224,12 +224,13 @@
   <footer>
     <h3>Authentic Reports Made Simple</h3>
   </footer>
-    <!-- Connect to day.js for dates -->
+    <!-- connects the jquery and dayjs libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script
-      src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
-      integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
-      crossorigin="anonymous"
+    src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+    crossorigin="anonymous"
     ></script>
-    <!-- <script src="./assets/js/script.js"></script> -->
+    <script src="assets/js/day.js"></script>
 </body>
 </html>
