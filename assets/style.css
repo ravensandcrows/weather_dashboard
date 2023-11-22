@@ -143,15 +143,18 @@
   
   /* HERO */
   /*background image + bounds set*/
-  #hero{
+  .hero{
     display: flex;
     flex-wrap:wrap;
     height: 400px;
     width: 100%;
     margin-bottom: 25px;
-    background-image: url('./images/standby.jpg');
     background-size:cover;
     background-position: 50% 25%;
+  }
+
+  #hero{
+    background-image: url('./images/standby.jpg');
   }
   
   /* heat, standby 50% 25% */
@@ -215,7 +218,7 @@
   .day{
     display: inline-block;
     width: 165px;
-    padding: 10px;
+    padding: 5px;
     text-align: center;
     margin-right: 15px;
     margin-bottom: 15px;
