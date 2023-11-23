@@ -1,8 +1,13 @@
 // global variables
 const apiKey= "ed77605a2ffd4d1bf846df5fc551180a";
-const apiUrl = "http://api.openweathermap.org/data/2.5/forecast?q=irvine,ca,usa";
+const apiUrl = "http://api.openweathermap.org/data/2.5/forecast?q=";
 
-const todayApiUrl= "https://api.openweathermap.org/data/2.5/weather?q=irvine,ca,usa"
+const todayApiUrl= "https://api.openweathermap.org/data/2.5/weather?q="
+
+const searchBox = document.querySelector("#searchCity");
+const searchBoxSC = document.querySelector('#searchState');
+const searchBoxCC = document.querySelector('#searchCountry');
+const searchBtn = document.querySelector("#searchBtn");
 // Hero image
 
 const hero = document.querySelector('#hero');
@@ -69,11 +74,11 @@ function day_icon(a, b, c)
 // weather 5 day report
 var time = dayjs().hour();
 
-async function checkWeather(){
-    const response = await fetch(apiUrl + `&appid=${apiKey}` + `&units=imperial`);
+async function checkWeather(city, state, country){
+    const response = await fetch(apiUrl + city + ',' + state + ',' + country + `&appid=${apiKey}` + `&units=imperial`);
     var data = await response.json();
 
-    const todayResponse = await fetch(todayApiUrl + `&appid=${apiKey}` + `&units=imperial`);
+    const todayResponse = await fetch(todayApiUrl + city + ',' + state + ',' + country + `&appid=${apiKey}` + `&units=imperial`);
     var todayData = await todayResponse.json();
 
     console.log(data);
@@ -115,7 +120,7 @@ async function checkWeather(){
             hero.style.backgroundImage = "url('./assets/images/snowy.jpeg')";
         }
         else if (todayIcon === 'Rain'){
-            hero.style.backgroundImage = "url('./assets/images/rainy.jpeg')";
+            hero.style.backgroundImage = "url('./assets/images/rainy.jpg')";
         }
     }
 
@@ -521,4 +526,30 @@ async function checkWeather(){
     }
 }
 
-checkWeather();
+function validateInput(){
+    var check = 0;
+    if (searchBox.value.trim() === ""){
+        alert("Please add a city name!");
+    }
+    else{
+        check++;
+    }
+    if (searchBoxSC.value.trim() === ""){
+        alert("For most accurate results, please add state name or code!");
+    }
+    else{
+        check++;
+    }
+    if(searchBoxCC.value.trim()===""){
+        alert("For most accurate results, please add a country name or code!");
+    }
+    else{
+        check++;
+    }
+}
+
+searchBtn.addEventListener("click", ()=>{
+    validateInput();
+    checkWeather(searchBox.value, searchBoxSC.value, searchBoxCC.value);
+});
+
