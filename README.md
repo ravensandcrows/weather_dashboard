@@ -1,18 +1,39 @@
-# weather_dashboard
+# Weather Dashboard
 
-##requirements:
-GIVEN a weather dashboard with form inputs
-WHEN I search for a city
-THEN I am presented with current and future conditions for that city and that city is added to the search history
-WHEN I view current weather conditions for that city
-THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, and the the wind speed
-WHEN I view future weather conditions for that city
-THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity
-WHEN I click on a city in the search history
-THEN I am again presented with current and future conditions for that city
+## Description
+    This is a web applicaiton that allows users to look up the weather conditions and the next five day forecast for any city. This helps users prepare for upcoming weather in one easy location where they can also save their
+    favorite cities and view most recent searches. 
 
 
-## references
+## Usage
+
+![Landing Page](/assets/images/startingpage.png)
+Introduced to a webpage waiting for user input.
+
+![Search Box](/assets/images/search_box.png)
+Type in your city, state, and country and hit search to find out the current forecast, or hit save and add the city to your favorite city list.
+
+After you hit search the webpage will update with the information you have given. The photo icon at the top will change based on the conditions.
+![Cloudy day](/assets/images/sanfran.png)
+Cloudy day
+![Sunny day](/assets/images/portland.png)
+Sunny day
+![Snowy day](/assets/images/flagstaff.png)
+Snowy day
+![Rainy day](/assets/images/avon.png)
+Rainy day
+
+![Five day forecast and recent history](/assets/images/5day.png)
+To the side bar you will see the recent searches. In the center you will see the five day weather forecast.
+
+![Favorite Cities](/assets/images/fav.png)
+At the bottom of the page will be where your favorite cities are stored.
+
+
+## Credits
+Apis: 
+    OpenweatherMap
+    Day JS
 html:
     search bar:
     https://www.w3schools.com/howto/howto_css_searchbar.asp
@@ -58,3 +79,9 @@ Icons:
     Windy: https://commons.wikimedia.org/wiki/File:Weather_icon_-_windy.svg
     Rainy: https://commons.wikimedia.org/wiki/File:Weather_icon_-_showers.svg#/media/File:Weather_icon_-_showers.svg
     Snowy: https://commons.wikimedia.org/wiki/File:Weather_icon_-_snowy.svg
+
+## Features
+
+Recent searches
+Saved Cities
+Five Day Forecast
