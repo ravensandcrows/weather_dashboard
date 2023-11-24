@@ -98,7 +98,7 @@
   }
   
   
-  .recent_search{
+.recent_search{
     background-color: whitesmoke;
     color: #1F2022;
     border: black;
@@ -132,16 +132,13 @@
     background-color: #a8b5d7;
     padding: 5px 70px;
     text-align: center;
+    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24); 
   }
   
-  .btn-onclick{
-    margin-top: 5%;
-    border-width: 3px;
-    border-style: solid;
-    border-color: #1F2022;
+  .btn:active{
     background-color: cadetblue;
-    padding: 5px 80px;
-    text-align: center;
+    transform: scale(0.98); 
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
   }
   
   .center{
@@ -261,49 +258,18 @@
     font-size: 30px;
   }
   
-  /* WEATHER ALERT */
-  #warning{
-    height: 400px;
-    width: 100%;
-    background-size:cover;
-  }
-  
-  .card{
-    display: flex;
-    padding: 180px;
-    text-align: center;
-    border: #1F2022;
-    border-width: 5px;
-    border-style: solid;
-    font-size: 40px;
-  }
-  
-  .warning{
-    margin-left: 115px;
-    font-size: 100px;
-    text-align: center;
-    background-color: red;
-    padding: 25px 180px 25px 180px;
-  }
-  
-  .no-alert{
-    font-size: 40px;
-    text-align: center;
-    background-color:#1F2022;
-    color: whitesmoke;
-    padding: 25px 180px 25px 180px;
-  }
-  
   /* FAVORITES */
-  .loved-cities{
+  #loved-cities{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
   }
   
   .loved-btn{
     margin-right: 25px;
     margin-bottom: 10px;
-    font-size: 30px;
+    margin-left: 5px;
+    font-size: 20px;
     background-color: lightblue;
     padding: 20px 40px 20px 40px;
   }
@@ -328,7 +294,6 @@
     justify-content: center;
     padding: 20px;
   }
-  
   
   /* ADAPTABILITY */
   

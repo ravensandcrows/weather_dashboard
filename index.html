@@ -16,9 +16,6 @@
                     <a href="#forecast">Forecast</a>
                 </li>
                 <li>
-                    <a href="#advisories" class="advise">Advisories</a>
-                </li>
-                <li>
                     <a href="#saved_cities">Saved Cities</a>
                 </li>
             </ul>
@@ -37,18 +34,13 @@
                 <!-- SEARCH BAR HERE  -->
                  <div class="center">
                     <input class= "btn" id="searchBtn" type="submit" value="Search">
-                    <input class="btn" id="btn" type="submit" value="&#x2764; Save">
-                 </div>
+                    <input class="btn" id="saveBtn" type="submit" value="&#x2764; Save">
+                </div>
             </div> 
             <div id="recent-search-list">
                 <!-- RECENT SEARCHES HERE  -->
                 <h2 id="recent-h2">Recent Searches</h2>
                 <ul id="searchHistory">
-                    <!-- <li class="recent-search">CITY NAME</li>
-                    <li class="recent-search">CITY NAME</li>
-                    <li class="recent-search">CITY NAME</li>
-                    <li class="recent-search">CITY NAME</li>
-                    <li class="recent-search">CITY NAME</li> -->
                 </ul>
             </div>
         </aside>
@@ -189,35 +181,11 @@
                     </div>
                 </div>
             </section>
-            <section id="advisories">
-                <h3 class="no-alert">No alert at this time</h3>
-                <img src="./assets/images/standby.jpg" alt="weather icon" id="warning">
-                <!-- WEATHER WARNINGS HERE -->
-                <div class="card">
-                    <p>REPORT HERE REPORT HERE REPORT HERE REPORT HERE</p>
-                </div>
-            </section>
             <!-- SAVED CITIES -->
             <section id="saved_cities">
                 <h3 class="favorite">Your Favorite Cities</h3>
-                <ul class="loved-cities">
-                    <li>
-                        <button class="loved-btn" id="city-1">City 1</button>
-                    </li>
-                    <li>
-                        <button class="loved-btn" id="city-2">City 2</button>
-                    </li>
-                    <li>
-                        <button class="loved-btn" id="city-3">City 3</button>
-                    </li>
-                    <li>
-                        <button class="loved-btn" id="city-4">City 4</button>
-                    </li>
-                    <li>
-                        <button class="loved-btn" id="city-5">City 5</button>
-                    </li>
+                <ul id="loved-cities">
                 </ul>
-                <!-- LOCAL STORAGE HERE -->
             </section>
         </main>
     </div>
