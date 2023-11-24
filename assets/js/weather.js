@@ -50,6 +50,9 @@ const icon_day_3 = document.getElementById("icon-day-3");
 const icon_day_4 = document.getElementById("icon-day-4");
 const icon_day_5 = document.getElementById("icon-day-5");
 
+// History:
+// const historyEl = document.getElementById("searchHistory");
+
 function day_icon(a, b, c)
 {
     if(c >= 20){
@@ -548,8 +551,79 @@ function validateInput(){
     }
 }
 
+let searchHistory = [];
+
+function search() {
+    if ( searchBox.value.trim() !== '') {
+        var searchTerm = searchBox.value + ',' + searchBoxSC.value + ',' + searchBoxCC.value;
+        // Add the search term to the search history array
+        searchHistory.unshift(searchTerm);
+
+    // Limit the search history to 5 items
+    if (searchHistory.length > 5) {
+        searchHistory.pop();
+    }
+
+    renderSearchHistory();
+    searchBox.value = '';
+    searchBoxSC.value = '';
+    searchBoxCC.value = '';
+    }
+
+    // // NEW
+    saveSearchHistory();
+}
+
+function initSearch(searchTerm){
+    if (searchTerm){
+        var terms = searchTerm.split(',');
+        checkWeather(terms[0], terms[1], terms[2]);
+    }
+}
+
+function renderSearchHistory() {
+    var searchHistoryElement = document.getElementById('searchHistory');
+    // Clear existing search history list
+    searchHistoryElement.innerHTML = '';
+
+    // Loop through the search history array and create list items for each search term
+    for (var i = 0; i < searchHistory.length; i++) {
+        const historyBtn = document.createElement('button');
+        historyBtn.classList.add('recent_search');
+        historyBtn.textContent = searchHistory[i];
+        historyBtn.addEventListener('click', ()=>{
+            initSearch(historyBtn.textContent);
+        });
+        searchHistoryElement.appendChild(historyBtn);
+    }
+}
+
+function saveSearchHistory(){
+    localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
+}
+
+function loadSearchHistory(){
+    var storedHistory = localStorage.getItem('searchHistory');
+    if (storedHistory){
+        searchHistory = JSON.parse(storedHistory);
+        renderSearchHistory();
+    }
+}
+
+window.onload = function(){
+    loadSearchHistory();
+}
+
 searchBtn.addEventListener("click", ()=>{
     validateInput();
     checkWeather(searchBox.value, searchBoxSC.value, searchBoxCC.value);
+    search();
 });
+
+
+
+
+
+
+
 
