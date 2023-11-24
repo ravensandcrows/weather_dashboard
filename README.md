@@ -34,6 +34,7 @@ css:
 
 js:
     https://javascript.info/async-await#:~:text=The%20word%20“async”%20before%20a,1%20%3B%20%7D%20f%20(%20)%20.
+    https://blog.logrocket.com/localstorage-javascript-complete-guide/
 
 photos:
     Windy: https://pxhere.com/en/photo/63946

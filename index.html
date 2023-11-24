@@ -29,9 +29,11 @@
         <!-- ASIDE search bar/recent searches/save -->
         <aside class="aside">
             <div id="start" class="text-block">
-                <input type="text" class="search" id="searchCity" placeholder="City" spellcheck = 'true'>
-                <input type="text" class="search" id="searchState" placeholder="State" spellcheck = 'true'>
-                <input type="text" class="search" id = "searchCountry" placeholder="Country" spellcheck = 'true'>
+                <form id="searchForm">
+                    <input type="text" class="search" id="searchCity" placeholder="City" spellcheck = 'true'>
+                    <input type="text" class="search" id="searchState" placeholder="State" spellcheck = 'true'>
+                    <input type="text" class="search" id = "searchCountry" placeholder="Country" spellcheck = 'true'>
+                </form>
                 <!-- SEARCH BAR HERE  -->
                  <div class="center">
                     <input class= "btn" id="searchBtn" type="submit" value="Search">
@@ -41,12 +43,12 @@
             <div id="recent-search-list">
                 <!-- RECENT SEARCHES HERE  -->
                 <h2 id="recent-h2">Recent Searches</h2>
-                <ul>
+                <ul id="searchHistory">
+                    <!-- <li class="recent-search">CITY NAME</li>
                     <li class="recent-search">CITY NAME</li>
                     <li class="recent-search">CITY NAME</li>
                     <li class="recent-search">CITY NAME</li>
-                    <li class="recent-search">CITY NAME</li>
-                    <li class="recent-search">CITY NAME</li>
+                    <li class="recent-search">CITY NAME</li> -->
                 </ul>
             </div>
         </aside>
