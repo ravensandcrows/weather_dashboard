@@ -1,9 +1,7 @@
 // global variables
 const apiKey= "ed77605a2ffd4d1bf846df5fc551180a";
 const apiUrl = "http://api.openweathermap.org/data/2.5/forecast?q=";
-
 const todayApiUrl= "https://api.openweathermap.org/data/2.5/weather?q="
-
 const searchBox = document.querySelector("#searchCity");
 const searchBoxSC = document.querySelector('#searchState');
 const searchBoxCC = document.querySelector('#searchCountry');
@@ -11,7 +9,6 @@ const searchBtn = document.querySelector("#searchBtn");
 const saveBtn = document.querySelector('#saveBtn');
 
 // Hero image
-
 const hero = document.querySelector('#hero');
 
 // Weather Condition
@@ -56,10 +53,9 @@ const icon_day_5 = document.getElementById("icon-day-5");
 let searchHistory = [];
 var savedHistory = [];
 
-function day_icon(a, b, c)
-{
+// photo function
+function day_icon(a, b, c){
     if(c >= 20){
-
     }
     else {
         if(a === 'Clouds'){
@@ -87,9 +83,6 @@ async function checkWeather(city, state, country){
     const todayResponse = await fetch(todayApiUrl + city + ',' + state + ',' + country + `&appid=${apiKey}` + `&units=imperial`);
     var todayData = await todayResponse.json();
 
-    console.log(data);
-    // console.log(todayData);
-
     //update city
     var city = document.querySelectorAll(".city_name");
     city.forEach(city_text => {
@@ -109,7 +102,6 @@ async function checkWeather(city, state, country){
     var todayWind = document.querySelector('#today_wind');
     windNow = Math.round(todayData.wind.speed);
     todayWind.innerText = windNow + 'mph';
-
 
     var todayIcon = todayData.weather[0].main;
     if (windNow >= 20){
