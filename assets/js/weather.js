@@ -8,9 +8,12 @@ const searchBox = document.querySelector("#searchCity");
 const searchBoxSC = document.querySelector('#searchState');
 const searchBoxCC = document.querySelector('#searchCountry');
 const searchBtn = document.querySelector("#searchBtn");
+const saveBtn = document.querySelector('#saveBtn');
+
 // Hero image
 
 const hero = document.querySelector('#hero');
+
 // Weather Condition
 var weather1 = document.querySelector('#weather1');
 var weather2 = document.querySelector('#weather2');
@@ -36,7 +39,6 @@ var wind3 = document.querySelector('#wind3');
 var wind4 = document.querySelector('#wind4');
 var wind5 = document.querySelector('#wind5');
 
-
 // JavaScript
 const iconCloudy = "./assets/images/icons/cloudy.png";
 const iconRainy = "./assets/images/icons/rainy.png";
@@ -51,7 +53,8 @@ const icon_day_4 = document.getElementById("icon-day-4");
 const icon_day_5 = document.getElementById("icon-day-5");
 
 // History:
-// const historyEl = document.getElementById("searchHistory");
+let searchHistory = [];
+var savedHistory = [];
 
 function day_icon(a, b, c)
 {
@@ -533,6 +536,7 @@ function validateInput(){
     var check = 0;
     if (searchBox.value.trim() === ""){
         alert("Please add a city name!");
+        return false;
     }
     else{
         check++;
@@ -551,23 +555,20 @@ function validateInput(){
     }
 }
 
-let searchHistory = [];
-
+// search history
 function search() {
     if ( searchBox.value.trim() !== '') {
         var searchTerm = searchBox.value + ',' + searchBoxSC.value + ',' + searchBoxCC.value;
         // Add the search term to the search history array
         searchHistory.unshift(searchTerm);
 
-    // Limit the search history to 5 items
-    if (searchHistory.length > 5) {
-        searchHistory.pop();
-    }
+        // Limit the search history to 5 items
+        if (searchHistory.length > 5) {
+            searchHistory.pop();
+        }
 
-    renderSearchHistory();
-    searchBox.value = '';
-    searchBoxSC.value = '';
-    searchBoxCC.value = '';
+        renderSearchHistory();
+    // setTimeout();
     }
 
     // // NEW
@@ -612,18 +613,81 @@ function loadSearchHistory(){
 
 window.onload = function(){
     loadSearchHistory();
+    loadSavedCities();
 }
 
 searchBtn.addEventListener("click", ()=>{
-    validateInput();
-    checkWeather(searchBox.value, searchBoxSC.value, searchBoxCC.value);
-    search();
+    var goodToRun = validateInput();
+    if (goodToRun === false){
+        return;
+    }
+    else{
+        checkWeather(searchBox.value, searchBoxSC.value, searchBoxCC.value);
+        search();
+    }
 });
 
+// saveSearch
+function saveSearch() {
+    if ( searchBox.value.trim() !== '') {
+        var saveTerm = searchBox.value + ',' + searchBoxSC.value + ',' + searchBoxCC.value;
+        savedHistory.unshift(saveTerm);
 
+        // Limit the search history to 5 items
+        if (savedHistory.length > 5) {
+            savedHistory.pop();
+        }
+        renderSavedHistory();
+    }
+    saveLovedHistory();
+}
 
+function initSave(searchTerm){
+    if (searchTerm){
+        var saveTerms = searchTerm.split(',');
+        checkWeather(saveTerms[0], saveTerms[1], saveTerms[2]);
+    }
+}
 
+function renderSavedHistory() {
+    var savedHistoryElement = document.getElementById('loved-cities');
+    // Clear existing search history list
+    savedHistoryElement.innerHTML = '';
 
+    // Loop through the search history array and create list items for each search term
+    for (var k = 0; k < savedHistory.length; k++) {
+        const savedCityBtn = document.createElement('button');
+        savedCityBtn.classList.add('loved-btn');
+        savedCityBtn.textContent = savedHistory[k];
+        savedCityBtn.addEventListener('click', ()=>{
+            initSave(savedCityBtn.textContent);
+        });
+        savedHistoryElement.appendChild(savedCityBtn);
+    }
+}
 
+function saveLovedHistory(){
+    localStorage.setItem('savedHistory', JSON.stringify(savedHistory));
+}
+
+function loadSavedCities(){
+    var storedCities = localStorage.getItem('savedHistory');
+    if (storedCities){
+        savedHistory = JSON.parse(storedCities);
+        renderSavedHistory();
+    }
+}
+
+saveBtn.addEventListener("click", ()=>{
+    var goodToGo = validateInput();
+    if (goodToGo === false){
+        return;
+    }
+    else{
+        checkWeather(searchBox.value, searchBoxSC.value, searchBoxCC.value);
+        saveSearch();
+        search();
+    }
+});
 
 
